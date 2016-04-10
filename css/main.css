@@ -22,9 +22,40 @@ nav{
 .cover{
 	width: 100%;
 	height: 400px;
-	background-image: url('../images/cover.jpg');
-	background-size: cover;
-	background-position: center;
+	overflow: hidden;
+	position: relative;
+}
+.slider-image{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: -100px;
+}
+.slider-description{
+	color: white;
+	width: 30%;
+	position: absolute;
+	margin-top: 250px;
+	margin-bottom: 16px;
+	margin-left: 60%;
+	margin-right: 0;
+	background: rgba(0,0,0,0.7);
+}
+
+.slider-controller{
+	text-align: center;
+	width: 100%;
+}
+
+.slider-controller li{
+	text-decoration: none;
+	color: black;
+	width: 10px;
+	height: 10px;
+	padding: 5px;
+	border-radius: 100%;
+	background-color: gray;
+	display: inline-block;
 }
 
 .menu{
