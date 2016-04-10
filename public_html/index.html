@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='blog'>
 <head>
 	<title>Diseñados por Dios</title>
 	<meta charset="UTF-8">
@@ -10,8 +10,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,100&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- Jqueary -->
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script type="text/javascript" src='/app/slider.js'></script>
+	<script type="text/javascript" src='/templates/cover/slider.js'></script>
 	<!-- Angular.js-->
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
+	<script type="text/javascript" src='/templates/cover/angular.js'></script>
 </head>
 
 <body>
@@ -26,44 +28,7 @@
 				<li>Mas Populares</li>
 			</ul>
 		</div>
-		<div class='cover'>
-			<div class='slider active' data-sliderpos='0'>
-				<img class='slider-image' src="/images/cover.jpg">
-				<div class='slider-description'>
-					<h3> Bienvenido a Diseñados por Dios</h3>
-					<p>Reflexiones para tu caminar con Dios.</p>
-				</div>
-			</div>
-			<div class='slider' data-sliderpos='1'>
-				<img class='slider-image' src="/images/ungranpoderconllevaunagranresponsabilidad.jpg">
-				<div class='slider-description'>
-					<h3>Titulo de la reflexion</h3>
-					<p>Descripcion de la reflexion...</p>
-				</div>
-			</div>
-			<div class='slider' data-sliderpos='2'>
-				<img class='slider-image' src="/images/busca_primeramente_el_reino.jpg">
-				<div class='slider-description'>
-					<h3>Titulo de la reflexion</h3>
-					<p>Descripcion de la reflexion...</p>
-				</div>
-			</div>
-			<div class='slider' data-sliderpos='3'>
-				<img class='slider-image' src="/images/losjovenesylapresionsocial.jpg">
-				<div class='slider-description'>
-					<h3>Titulo de la reflexion</h3>
-					<p>Descripcion de la reflexion...</p>
-				</div>
-			</div>
-			
-			</div>
-			<ul class='slider-controller'>
-				<li class='slider-btn active' data-sliderpos='0'></li>
-				<li class='slider-btn' data-sliderpos='1'></li>
-				<li class='slider-btn' data-sliderpos='2'></li>
-				<li class='slider-btn' data-sliderpos='3'></li>
-			</ul>
-		</div>
+		<cover></cover>
 	</nav>
 	<div class='container'>
 		<h2>Articulos <small>|Navega por nuestro contenido o suscribite a nuestro buzón.</small></h2>
