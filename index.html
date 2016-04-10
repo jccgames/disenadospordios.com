@@ -8,30 +8,40 @@
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<!-- Google Font -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,100&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- Jqueary -->
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<!-- Angular.js-->
 </head>
 
 <body>
 	<nav>
+		<div class='icon-back'><span class='icon-DxD'></span></div>
 		<h1 class='header'>Diseñados por Dios</h1>
 		<div class='menu'>
 			<ul>
 				<li>Para Jovenes</li>
 				<li>Para Lideres</li>
-				<li>Emprendimiento</li>
+				<li>Videos</li>
 				<li>Mas Populares</li>
 			</ul>
 		</div>
 		<div class='cover'>
-			<div class='slider'>
+			<div class='slider active' data-sliderpos='1'>
 				<img class='slider-image' src="images/cover.jpg">
-				<h3 class='slider-description'> Bienvenido a Diseñados por Dios</h3>
+				<div class='slider-description'>
+					<h3> Bienvenido a Diseñados por Dios</h3>
+					<p>Reflexiones para tu caminar con Dios.</p>
+				</div>
 			</div>
+			
+			</div>
+			<ul class='slider-controller'>
+				<li class='slider-btn active'></li>
+				<li class='slider-btn'></li>
+				<li class='slider-btn'></li>
+				<li class='slider-btn'></li>
+			</ul>
 		</div>
-		<ul class='slider-controller'>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
 	</nav>
 	<div class='container'>
 		<h2>Articulos <small>|Navega por nuestro contenido o suscribite a nuestro buzón.</small></h2>

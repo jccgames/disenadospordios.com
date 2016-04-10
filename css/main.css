@@ -14,6 +14,20 @@ nav{
 	margin: auto;
 }
 
+.icon-back{
+	position: relative;
+}
+
+.icon-back .icon-DxD{
+	position: absolute;
+	font-size: 4em;
+	color: rgba(60,60,60,0.5);
+	left: 50%;
+	transform:translateX(-50%);
+	z-index: -100;
+	top: -20px;
+}
+
 .header{
 	text-align: center;
 	padding-bottom: 35px;
@@ -24,6 +38,12 @@ nav{
 	height: 400px;
 	overflow: hidden;
 	position: relative;
+}
+.slider{
+	display: none;
+}
+.slider.active{
+	display: block;
 }
 .slider-image{
 	width: 100%;
@@ -41,10 +61,15 @@ nav{
 	margin-right: 0;
 	background: rgba(0,0,0,0.7);
 }
+.slider-description h3{
+	padding-bottom: 6px;
+}
 
 .slider-controller{
 	text-align: center;
 	width: 100%;
+	position: absolute;
+	bottom: 0%;
 }
 
 .slider-controller li{
@@ -52,10 +77,20 @@ nav{
 	color: black;
 	width: 10px;
 	height: 10px;
-	padding: 5px;
+	padding: 2px;
+	margin: 5px;
 	border-radius: 100%;
-	background-color: gray;
 	display: inline-block;
+	box-shadow: 2px -3px 2px rgba(0,0,0,0.8);
+	background: gray; /* For browsers that do not support gradients */
+ 	background: -webkit-radial-gradient(circle, rgba(250,250,250,0.21), rgba(250,250,250,0.35), rgba(250,250,250,1));/* Safari */
+  	background: -o-radial-gradient(circle, rgba(250,250,250,0.21), rgba(250,250,250,0.35), rgba(250,250,250,1)); /* Opera 11.6 to 12.0 */
+  	background: -moz-radial-gradient(circle, rgba(250,250,250,0.21), rgba(250,250,250,0.35), rgba(250,250,250,1));; /* Firefox 3.6 to 15 */
+  	background: radial-gradient(circle, rgba(250,250,250,0.21), rgba(250,250,250,0.35), rgba(250,250,250,1)); /* Standard syntax */
+}
+
+.slider-btn.active{
+	background: white; /* For browsers that do not support gradients */
 }
 
 .menu{
