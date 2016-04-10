@@ -68,8 +68,9 @@ nav{
 .slider-controller{
 	text-align: center;
 	width: 100%;
-	position: absolute;
-	bottom: 0%;
+	position: relative;
+	bottom: 30px;
+	left: 0;
 }
 
 .slider-controller li{
@@ -108,7 +109,6 @@ li{
 	padding-right: 5px;
 }
 .container{
-	padding-top: 35px;
 	max-width: 1000px;
 	margin: auto;
 }
