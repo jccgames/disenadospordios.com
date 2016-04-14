@@ -1,13 +1,14 @@
-(function(){
-	var app= angular.module('blog',[]);
+var app = angular.module('blog',['ngAnimate']);
 
 
-	app.directive('cover',function(){
+app.directive('cover',function(){
 		return {
-			restric: 'E',
-			templateUrl: '/templates/cover/cover.html'
+			restric: 'A',
+			templateUrl: '/templates/cover/index.html',
 		};
 	});
 
 
-})();
+app.controller('sliderController',function($scope){
+	$scope.slidePos=0;
+});
