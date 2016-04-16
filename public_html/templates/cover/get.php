@@ -16,7 +16,7 @@ if (!$conn) {
 //We are connected
 
 
-$sql = "SELECT * FROM blogs ORDER BY id DESC LIMIT 4";
+$sql = "SELECT * FROM blogs ORDER BY fecha DESC LIMIT 4";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
