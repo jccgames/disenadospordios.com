@@ -1,5 +1,19 @@
 <?php
-require "/app/connect.php";
+
+$servername = "localhost";
+$username = "lector";
+$password = "VnFeEAJKs463UHLU";
+$dbname = "disenadospordios";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+} else {
+	echo "Connection made";
+}
+
 
 $sql = "SELECT id, firstname, lastname, age FROM prueba";
 $result = mysqli_query($conn, $sql);
