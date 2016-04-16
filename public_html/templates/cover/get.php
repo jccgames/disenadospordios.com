@@ -13,7 +13,7 @@ if (!$conn) {
 }
 
 
-$sql = "SELECT id imagen, titulo, descripcion FROM blogs ORDER BY id DESC LIMIT 4";
+$sql = "SELECT id, imagen, titulo, descripcion FROM blogs ORDER BY id DESC LIMIT 4";
 $result = mysqli_query($conn, $sql);
 
 $pos=0;
