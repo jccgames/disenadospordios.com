@@ -18,14 +18,12 @@ if (!$conn) {
 
 $sql = "SELECT id, firstname, lastname, age FROM prueba";
 $result = mysqli_query($conn, $sql);
-$data = array()
-$index = 0;
+$data = array();
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-    	$data[$index]=$row;
-    	$index += 1;
-    	echo 'please'.json_encode($data);
+    	$data[]=$row;
+    	echo json_encode($data);
     }
 }
 mysqli_close($conn);
