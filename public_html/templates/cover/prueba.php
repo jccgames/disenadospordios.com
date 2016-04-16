@@ -23,10 +23,11 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
     	$data[]=$row;
-    	echo json_encode($data);
     }
 }
 mysqli_close($conn);
+
+echo json_encode($data);
 
 
 ?>
