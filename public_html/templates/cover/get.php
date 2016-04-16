@@ -15,7 +15,7 @@ if (!$conn) {
 
 //We are connected
 
-$sql = "SELECT id, image, title, description FROM post_info";
+$sql = "SELECT 'id', 'image', 'title', 'description' FROM 'post_info'";
 $result = mysqli_query($conn, $sql);
 $data = array();
 $pos=0;
