@@ -10,8 +10,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connection made";
+} else 
+{echo "Connection made";}
 
 
 $sql = "SELECT id, imagen, titulo, descripcion FROM blogs ORDER BY id DESC LIMIT 4";
