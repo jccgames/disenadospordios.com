@@ -15,17 +15,21 @@ if (!$conn) {
 
 //We are connected
 
-
-$sql = "SELECT * FROM blogs ORDER BY id DESC LIMIT 4";
+$sql = "SELECT id, image, title, description FROM post_info";
 $result = mysqli_query($conn, $sql);
-
+$data = array();
+$pos=0;
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-    	echo $row['id'].'...';
+    	$data[]=$row;
+    	$data[$pos]['position']=$pos;
+    	$pos += 1;
     }
 }
 mysqli_close($conn);
+
+echo stripcslashes(json_encode($data));
 
 
 ?>

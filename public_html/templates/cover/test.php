@@ -3,8 +3,8 @@
 
 $cars = array
   (
-  array('model'=>"Volvo",'use'=>22 ,'new'=>18),
-  array('model'=>"BMW",'use'=>15,'new'=>13),
+  array('model'=>"<p>Volvo paragraph</p>",'use'=>22 ,'new'=>18),
+  array('model'=>"<p>BMW</p>",'use'=>15,'new'=>13),
   array('model'=>"Saab",'use'=>5,'new'=>2),
   array('model'=>"Land Rover",'use'=>17,'new'=>15)
   );
@@ -16,7 +16,6 @@ $cars = array
 
 //array_push($cars[0], $newdata);
 
-echo json_encode($cars);
-
+echo stripslashes(json_encode($cars));
 
 ?>
