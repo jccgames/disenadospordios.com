@@ -1,10 +1,10 @@
 <div ng-controller='sliderController'>
 	<div class='cover'>
-		<div class='slider fade' ng-repeat='info in slides' ng-show="slidePos === info.pos">
-			<img class='slider-image' ng-src="{{info.image}}">
+		<div class='slider fade' ng-repeat='info in slides' ng-show="slidePos == info.pos">
+			<img class='slider-image' ng-src="{{info.picture}}">
 			<div class='slider-description'>
-				<h3> {{info.title}}</h3>
-				<p>{{info.description}}</p>
+				<h3> {{info.title }}</h3>
+				<p>{{info.summary }}</p>
 			</div>
 		</div>
 	</div>
