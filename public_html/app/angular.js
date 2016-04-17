@@ -5,8 +5,8 @@ app.directive('cover',function(){
 		return {
 			restric: 'A',
 			templateUrl: '/templates/cover/index.html',
-		};
-	});
+	};
+});
 
 
 app.controller('sliderController',function($scope, $timeout){
@@ -20,19 +20,19 @@ app.controller('sliderController',function($scope, $timeout){
 		},
 		{
 			pos: 1,
-			image: "/images/busca_primeramente_el_reino.jpg",
+			image: "/images/id1.jpg",
 			title: 'Titulo 1',
 			description: 'Descripcion 1'
 		},
 		{
 			pos: 2,
-			image: "/images/ungranpoderconllevaunagranresponsabilidad.jpg",
+			image: "/images/id2.jpg",
 			title: 'Titulo 2',
 			description: 'Descripcion 2'
 		},
 		{
 			pos: 3,
-			image: "/images/losjovenesylapresionsocial.jpg",
+			image: "/images/id3.jpg",
 			title: 'Titulo 3',
 			description: 'Descripcion 3'
 		}
