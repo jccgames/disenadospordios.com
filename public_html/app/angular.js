@@ -11,7 +11,7 @@ app.directive('cover',function(){
 });
 
 
-app.controller('sliderController',function($scope, $timeout, $sce, $http){
+app.controller('sliderController',function($scope, $timeout, $http){
 	$scope.slidePos=0;
 	$http.get('/templates/cover/get.php').success(function(data){
 		$scope.slides =  data;
@@ -36,4 +36,10 @@ app.directive('feed',function(){
 		restric: 'A',
 		templateUrl: 'templates/feed/index.html'
 	};
+});
+
+app.controller('cardController',function($scope, $http){
+	$http.get('/templates/feed/get.php').success(function(data){
+		$scope.cards = data;
+	});
 });
