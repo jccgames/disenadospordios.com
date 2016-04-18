@@ -1,6 +1,8 @@
 var app = angular.module('blog',['ngAnimate','ngSanitize']);
 
 
+//Cover Tag
+
 app.directive('cover',function(){
 		return {
 			restric: 'A',
@@ -24,4 +26,14 @@ app.controller('sliderController',function($scope, $timeout, $sce, $http){
     }
     
     $timeout(countUp, 4000);
+});
+
+
+//Feed Tag
+
+app.directive('feed',function(){
+	return{
+		restric: 'A',
+		templateUrl: 'templates/feed/index.html'
+	};
 });
