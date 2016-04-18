@@ -1,4 +1,4 @@
-var app = angular.module('blog',['ngAnimate']);
+var app = angular.module('blog',['ngAnimate','ngSanitize']);
 
 
 app.directive('cover',function(){
@@ -9,12 +9,11 @@ app.directive('cover',function(){
 });
 
 
-app.controller('sliderController',function($scope, $timeout, $http){
+app.controller('sliderController',function($scope, $timeout, $sce, $http){
 	$scope.slidePos=0;
 	$http.get('/templates/cover/get.php').success(function(data){
-		$scope.slides = data;
+		$scope.slides =  data;
 	});
-
 	var countUp = function() {
 		if ($scope.slidePos > 2) {
         	$scope.slidePos= 0;

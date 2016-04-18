@@ -3,8 +3,8 @@
 		<div class='slider fade' ng-repeat='info in slides' ng-show="slidePos == info.pos">
 			<img class='slider-image' ng-src="{{info.picture}}">
 			<div class='slider-description'>
-				<h3> {{info.title }}</h3>
-				<p>{{info.summary }}</p>
+				<h3 ng-bind-html="info.title"></h3>
+				<p ng-bind-html='info.summary'></p>
 			</div>
 		</div>
 	</div>
