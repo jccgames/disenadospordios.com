@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost";
+$servername = "168.235.69.194";
 $username = "lector";
 $password = "VnFeEAJKs463UHLU";
 $dbname = "disenadospordios";
@@ -15,7 +15,7 @@ if (!$conn) {
 
 //We are connected
 
-$sql = "SELECT title, picture FROM posts ORDER BY id DESC LIMIT 3";
+$sql = "SELECT title, picture FROM articles ORDER BY id DESC LIMIT 3";
 $result = mysqli_query($conn, $sql);
 $cover = array('pos' => 0, 'title' => 'Bienvenido a Dise&ntilde;ados por Dios', 'picture' => '/images/cover.jpg');
 $data = array();
