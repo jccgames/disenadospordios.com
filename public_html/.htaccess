@@ -1,0 +1,29 @@
+#Turn Rewrite Engine On
+RewriteEngine on
+
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will match
+# $ in the regular expression makes the matching stop so that "customblah" will not work
+
+
+<IfModule mod_rewrite.c>  
+
+
+RewriteCond %{REQUEST_METHOD}  !=POST
+
+
+#FOR blogs.php?title=un_gran_poder
+RewriteRule ^blog/(.*) 		templates/editor/index.html?id=$1 [NC,L]
+
+</IfModule>
+
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
+# ([0-9a-zA-Z_-]+)
+
+
+ErrorDocument 404 /404.html
