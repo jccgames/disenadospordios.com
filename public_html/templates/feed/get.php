@@ -1,8 +1,8 @@
 <?php
 
 $servername = "168.235.69.194";
-$username = "lector";
-$password = "VnFeEAJKs463UHLU";
+$username = "editor";
+$password = "c9tz6CEsCSs4a3TV";
 $dbname = "disenadospordios";
 
 // Create connection
@@ -14,24 +14,21 @@ if (!$conn) {
 
 
 //We are connected
-
-$sql = "SELECT title, picture, views, likes, description FROM articles ORDER BY datePublish DESC LIMIT 3";
+$sql = "SELECT id, title, author, datePublish, description, views, likes, url, picture FROM articles ORDER BY datePublish DESC";
 $result = mysqli_query($conn, $sql);
-$cover = array('pos' => 0, 'title' => 'Bienvenido a Dise&ntilde;ados por Dios', 'picture' => '/images/cover.jpg', 'views' => 0, 'likes' => 0, 'description' => 'Reflexiones para tu vida cristiana.');
 $data = array();
-$data[] = $cover;
-$pos = 0;
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-    	$pos += 1;
-    	$row['pos'] = $pos;
+		$date = date_create($row['datePublish']);
+		$row['datePublish'] =date_format($date, 'd/m/Y');
     	$data[]=$row;
     }
 }
 mysqli_close($conn);
 
 echo json_encode($data);
+
 
 
 ?>

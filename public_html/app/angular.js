@@ -39,7 +39,14 @@ app.directive('feed',function(){
 });
 
 app.controller('cardController',function($scope, $http){
+	$scope.sections=[];
 	$http.get('/templates/feed/get.php').success(function(data){
 		$scope.cards = data;
+		var max=$scope.cards.length;
+
+		var i=0;
+		for (i = 0; i < max/3; i=i+1) {
+			$scope.sections[i]= i*3;
+		};
 	});
 });

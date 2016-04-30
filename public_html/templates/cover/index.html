@@ -1,9 +1,15 @@
 <div ng-controller='sliderController'>
+	<div class='cover-welcome'>
+		<img src="/images/cover.jpg">
+		<h4>Bienvenido a Diseñados por Dios</h4><hr>
+	</div>
 	<div class='cover'>
 		<div class='slider fade' ng-repeat='info in slides' ng-show="slidePos == info.pos">
 			<img class='slider-image' ng-src="{{info.picture}}">
 			<div class='slider-description'>
 				<h1 ng-bind-html="info.title"></h1>
+				<small ng-hide='$first'> <span class="icon-view"></span> <span ng-bind-html='info.views'></span> | <span class="icon-heart"></span> <span ng-bind-html='info.likes'></span></small> <br>
+				<small class='small-large'> <span ng-bind-html='info.description'></span> <span ng-hide='$first'>...</span></small>
 			</div>
 		</div>
 	</div>

@@ -4,10 +4,13 @@
 </div>
 
 <div class='container' ng-controller='cardController'>
-	<div class="section group" ng-repeat='card in cards'>
-		<div class="col span_1_of_3 post-card">
-			<h1 ng-bind-html='card.title'></h1>
-			<p ng-bind-html='card.description'></p>
+	<div class="section group card-block" ng-repeat='block in sections'>
+		<div ng-repeat='card in cards | limitTo: 3 : block' class="col span_1_of_3">
+			<img class='card-image' ng-src="{{card.picture}}">
+			<h3 class='capitalize' ng-bind-html='card.title'></h3>
+			<small> <span class='icon-user2'></span> <span ng-bind-html='card.author'></span> | <span class='icon-clock'></span> <span ng-bind-html='card.datePublish'></span></small>
+			<p><span ng-bind-html='card.description'></span>...</p>
+			<small> <span class="icon-view"></span> <span ng-bind-html='card.views'></span> | <span class="icon-heart"></span> <span ng-bind-html='card.likes'></span></small>
 		</div>
 	</div>
 </div>
