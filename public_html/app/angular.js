@@ -34,7 +34,7 @@ app.controller('sliderController',function($scope, $timeout, $http){
 app.directive('feed',function(){
 	return{
 		restric: 'A',
-		templateUrl: 'templates/feed/index.html'
+		templateUrl: '/templates/feed/index.html'
 	};
 });
 
@@ -49,4 +49,16 @@ app.controller('cardController',function($scope, $http){
 			$scope.sections[i]= i*3;
 		};
 	});
+
+	$scope.loadArticle = function (url){
+		
+		angular.element('body').addClass("no-scroll");
+		angular.element('.article-floating-all').removeClass("hidden");
+		//Loading Data
+		$http.get('/templates/blog/get.php?url='+url).success(function(data){
+			$scope.article= data;
+		})
+	}
+
+
 });

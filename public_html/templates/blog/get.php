@@ -1,5 +1,4 @@
 <?php
-
 $servername = "168.235.69.194";
 $username = "editor";
 $password = "c9tz6CEsCSs4a3TV";
@@ -14,15 +13,16 @@ if (!$conn) {
 
 
 //We are connected
-$sql = "SELECT id, title, author, datePublish, description, views, likes, url, picture FROM articles WHERE publish='1' ORDER BY datePublish DESC";
+
+$url = $_GET["url"];
+
+$sql = "SELECT * FROM articles WHERE url='$url'";
 $result = mysqli_query($conn, $sql);
 $data = array();
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-		$date = date_create($row['datePublish']);
-		$row['datePublish'] =date_format($date, 'd/m/Y');
-    	$data[]=$row;
+    	$data=$row;
     }
 }
 mysqli_close($conn);

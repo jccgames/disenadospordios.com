@@ -4,13 +4,24 @@
 </div>
 
 <div class='container' ng-controller='cardController'>
+	<!--Feed-->
 	<div class="section group card-block" ng-repeat='block in sections'>
 		<div ng-repeat='card in cards | limitTo: 3 : block' class="col span_1_of_3">
 			<img class='card-image' ng-src="{{card.picture}}">
-			<h3 class='capitalize' ng-bind-html='card.title'></h3>
+			<a class='link' ng-href='#{{card.url}}' ng-click="loadArticle(card.url)"><h3 class='capitalize' ng-bind-html='card.title'></h3></a>
 			<small> <span class='icon-user2'></span> <span ng-bind-html='card.author'></span> | <span class='icon-clock'></span> <span ng-bind-html='card.datePublish'></span></small>
 			<p><span ng-bind-html='card.description'></span>...</p>
 			<small> <span class="icon-view"></span> <span ng-bind-html='card.views'></span> | <span class="icon-heart"></span> <span ng-bind-html='card.likes'></span></small>
+		</div>
+	</div>
+	<!--Flotaing article-->
+	<div class='article-floating-all hidden'>
+		<div class='article-floating'>
+			<div class='article-cover'>
+				<img class='article-image' ng-src="{{article['picture']}}">
+			</div>
+			<h1 class='capitalize' ng-bind-html='article["title"]'> </h1>
+			<div class='article-body' ng-bind-html='article["content"]'></div>
 		</div>
 	</div>
 </div>

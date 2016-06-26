@@ -15,7 +15,7 @@ if (!$conn) {
 
 //We are connected
 
-$sql = "SELECT title, picture, views, likes, description FROM articles ORDER BY datePublish DESC LIMIT 3";
+$sql = "SELECT title, picture, views, likes, description FROM articles WHERE publish='1' ORDER BY datePublish DESC LIMIT 3";
 $result = mysqli_query($conn, $sql);
 $cover = array('pos' => 0, 'title' => 'Bienvenido a Dise&ntilde;ados por Dios', 'picture' => '/images/cover.jpg', 'views' => 0, 'likes' => 0, 'description' => 'Reflexiones para tu vida cristiana.');
 $data = array();

@@ -9,11 +9,8 @@ RewriteEngine on
 <IfModule mod_rewrite.c>  
 
 
-RewriteCond %{REQUEST_METHOD}  !=POST
-
-
 #FOR blogs.php?title=un_gran_poder
-RewriteRule ^blog/(.*) 		templates/editor/index.html?id=$1 [NC,L]
+#RewriteRule ^blog/(.*) 		index.php?url=$1 [NC,L]
 
 </IfModule>
 

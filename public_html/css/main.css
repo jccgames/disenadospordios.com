@@ -4,6 +4,10 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+h3{
+	color: rgb(29,33,41);
+}
+
 body {
 	background: rgb(230,230,230);
 }
@@ -24,6 +28,11 @@ small{
 a{
 	text-decoration: none;
 	color: #3bc492;
+}
+a:hover{
+	text-decoration: underline;
+	-moz-text-decoration-color: rgb(29,33,41);; /* Code for Firefox */
+    text-decoration-color: rgb(29,33,41);;
 }
 
 .capitalize{
@@ -160,7 +169,47 @@ li{
 	width: 100%;
 	height: auto;
 }
+/*Reading Aricle*/
+.article-floating-all{
+	position: fixed;
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	overflow-y: scroll;
+}
+.article-floating{
+	width: 90%;
+	margin: 32px auto;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(29, 33, 41, 0.93);
+}
+.no-scroll{
+	overflow: hidden;
+}
+.hidden{
+	overflow: hidden;
+	display: none;
+}
 
+.article-floating h1{
+	margin: 32px 20% 16px 20%;
+	color: rgb(29,33,41);
+}
+.article-cover {
+	overflow: hidden;
+	height: 400px;
+	width: 100%;
+	border-radius:10px 10px 0 0;
+}
+.article-cover img {
+	width: 100%;
+	height: auto;
+}
+.article-body{
+	padding: 0 20% 64px 20%;
+}
 /*Grids----------------------------------------------*/
 /*  SECTIONS  */
 .section {
@@ -184,9 +233,9 @@ li{
 .group { zoom:1; /* For IE 6/7 */ }
 
 /*  GRID OF THREE  */
-.span_3_of_3 { width: 100%; }
-.span_2_of_3 { width: 66.13%; }
-.span_1_of_3 { width: 32.26%; }
+.span_3_of_3 { width: 100%; transition: all linear 0.5s;}
+.span_2_of_3 { width: 66.13%; transition: all linear 0.5s;}
+.span_1_of_3 { width: 32.26%; transition: all linear 0.5s;}
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 1000px) {
